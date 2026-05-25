@@ -21,6 +21,26 @@
         };
     };
 
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp RIGHT_ARROW>;
+
+            label = "NEW_MACRO";
+        };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
